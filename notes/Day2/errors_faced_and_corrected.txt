@@ -1,0 +1,60 @@
+
+error 1
+-------
+if namenode does not start what do we do?
+-----------------------------------------
+
+https://stackoverflow.com/questions/22316187/datanode-not-starts-correctly
+You can do the following method,
+copy to clipboard datanode clusterID for your example, CID-8bf63244-0510-4db6-a949-8f74b50f2be9
+and run following command under HADOOP_HOME/bin directory
+./hdfs namenode -format -clusterId CID-8bf63244-0510-4db6-a949-8f74b50f2be9
+then this code formatted the namenode with datanode cluster ids
+
+
+error2
+------
+if we do not get the web-page display?
+---------------------------------------
+the java version you are using is incorrect, i changed it to java8
+
+
+error 3
+-------
+error: resource manager does not start
+---------------------------------------
+https://stackoverflow.com/questions/51118358/noclassdeffounderror-org-apache-hadoop-yarn-server-timelineservice-collector-tim
+
+use below java version C:\bdp2\hadoop\hadoop-3.0.3\sbin>java -version java version "1.8.0_181" Java(TM) SE Runtime Environment (build 1.8.0_181-b13) Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
+copy "hadoop-yarn-server-timelineservice-3.0.3" from ~\hadoop-3.0.3\share\hadoop\yarn\timelineservice to ~\hadoop-3.0.3\share\hadoop\yarn folder. 
+the error disappears and the resource manager works fine
+
+i had java8, but i did not change the version as mentioned above, but i just copied the files mentioned, it worked
+
+
+error 4
+-------
+when you give hadoop version
+you get "c:\Program" not recoginised as an internal or external
+---------------------------------------------------------------
+
+this error comes becuase there is white space in the environment variable
+when you configure in control panel and advanced settings
+
+so copy the java directory from c:\Program files to c:\
+change the JAVA_HOME in control panel and advanced settings and also in 
+hadoop-env.cmd
+
+error5
+------
+The filename, directory name, or volume label syntax is incorrect
+-----------------------------------------------------------------
+
+in control panel, advanced settings go to path variable
+remove the " " from the path variable
+
+go to C:\Users\Gururajan\Downloads\hadoop-3.1.0\etc\hadoop
+open hadoop-env.cmd
+the remove the " " from the JAVA_HOME variable in hadoop-env.cmd
+
+

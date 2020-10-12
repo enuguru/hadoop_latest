@@ -1,0 +1,10 @@
+
+hadoop example programs
+https://muhammadbilalyar.github.io/blogs/How-to-Run-Hadoop-wordcount-MapReduce-Example-on-Windows-10/
+
+https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+
+https://dimensionless.in/know-how-to-install-and-run-hadoop-on-windows-for-beginners/
+
+all hadoop commands
+https://hadoop.apache.org/docs/r3.1.0/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html

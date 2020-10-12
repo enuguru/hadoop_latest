@@ -1,0 +1,29 @@
+
+
+type sample.txt  or  cat sample.txt
+
+dir  or  ls
+
+path or PATH
+
+echo %path%   or   echo %PATH%
+
+echo %JAVA_HOME%
+
+set the java path
+set path=%path%;<java installed directory\bin>
+eg: set path=%path%;C:\Program Files (x86)\Java\jdk1.7.0\bin
+
+setting Classpath
+set classpath=%classpath%;<java installed directory\lib\*.jar>
+eg: set classpath=%classpath%;C:\Program Files 
+(x86)\Java\jdk1.7.0\lib\*.jar
+
+set PATH=c:\Program Files\Java\jdk1.6.0_03\bin;%PATH%
+set PATH "%PATH%;%JAVA_HOME%\bin";
+
+
+
+set HADOOP_CLASSPATH = c:\users\gururajan\hadoop\hadoop-8.31
+or
+export HADOOP_CLASSPATH = c:\users\gururajan\hadoop\hadoop-8.31

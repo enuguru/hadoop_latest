@@ -1,0 +1,55 @@
+
+
+
+go to home directory of the download
+
+build all the java source and packages
+mvn package -DskipTests
+
+set HADOOP_CLASSPATH=hadoop-examples.jar
+
+go to the directory where you have sample.txt, then give
+the following command
+
+hadoop fs -put /input_dir/sample.txt /output_dir 
+or
+hdfs dfs -put /input_dir/sample.txt /output_dir
+
+hadoop MaxTemperature /input_dir/sample.txt /output_dir
+
+
+how to check the output in hadoop file systems
+----------------------------------------------
+
+from any directory on cmd prompt give the following commands
+
+hadoop fs -ls /output_dir/
+hadoop fs -cat /output_dir/part-r-00000
+
+
+how to clear the hadoop file system output directory
+----------------------------------------------------
+
+hadoop fs -ls /output_dir
+hadoop fs -rm /output_dir/*
+hadoop fs -rmdir /output_dir
+
+
+how to run java wordcount mapreduce program on hadoop?
+
+
+set HADOOP_CLASSPATH=hadoop-examples.jar
+
+go to the directory where you have sample.txt, then give
+the following command
+
+hadoop fs -put /input_dir/file_one.txt /output_dir 
+or
+hdfs dfs -put /input_dir/file_one.txt /output_dir
+
+hadoop MaxTemperature /input_dir/file_one.txt /output_dir
+
+
+
+
+

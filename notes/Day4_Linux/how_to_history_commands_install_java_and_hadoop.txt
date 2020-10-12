@@ -1,0 +1,70 @@
+   55  sudo apt-get update
+   56  lsb_release -a
+   57  sudo apt-get install  default-jdk
+   59  sudo dpkg --configure -a
+   66  sudo apt-get install astyle
+   78  sudo apt-get update
+  115  java -version
+  137  mkdir software
+  138  cd software
+  139  mkdir hadoop
+  140  cd hadoop/
+  141  mv ~/Downloads/hadoop-3.1.2.tar.gz .
+  144  shasum -a 256 hadoop-3.0.3.tar.gz
+  145  shasum -a 256 hadoop-3.1.2.tar.gz
+  146  tar -xvzf hadoop-3.1.2.tar.gz 
+  147  readlink -f /usr/bin/java | sed "s:bin/java::"
+  148  /usr/lib/jvm/java-11-openjdk-amd64/
+  149  java 
+  150  which java
+  151  readlink -f /usr/bin/java | sed "s:bin/java::"
+  153  cd hadoop-3.1.2/
+  157  cd hadoop/
+  159  vim hadoop-env.sh 
+  160  hadoop version
+  161  java -version
+  162  javac -version
+  169  cd hadoop-3.1.2/
+  242  start-dfs.cmd
+  243  start-dfs.sh
+  244  sudo apt-get install openssh-server
+  245  start-dfs.sh
+  248  jps
+  251  hadoop namenode -format
+  252  start-dfs.sh
+  253  jps
+  256  jps
+  257  sudo kill -9 6132
+  264  ps -ef | grep hadoo
+  266  ps -ef | grep hadoop
+  267  ps -ef | grep namenode
+  268  ps -ef | grep datanode
+  269  ps -ef | grep resourcemanager
+  270  ps -ef | grep nodemanager
+  271  ps -ef | grep "namenode"
+  272  jps
+  286  hadoop namenode -format
+  287  start-dfs.sh
+  288  jps
+  289  start-yarn.sh
+  290  jps
+  291  stop-all.sh
+  292  start-all.sh
+  293  jps
+  294  stop-all.sh
+  295  exit
+  296  cd /srv/software/hadoop/hadoop-3.1.2/
+  297  cd etc
+  298  ls
+  299  cd hadoop/
+  300  ls
+  301  vim hadoop-env.sh
+  302  exit
+  303  sudo apt-get update
+  304  java -version
+  305  hadoop version
+  306  hadoop namenode -format
+  307  cd /srv/software/hadoop/hadoop-3.1.2/sbin/
+  309  start-dfs.sh
+  310  start-yarn.sh
+  311  jps

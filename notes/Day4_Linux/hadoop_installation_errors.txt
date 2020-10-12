@@ -1,0 +1,11 @@
+
+
+error while starting start-dfs.sh - script
+------------------------------------------
+localhost: ramanujan@localhost: Permission denied (publickey,password)
+
+solution
+--------
+https://stackoverflow.com/questions/28210637/unable-to-ssh-localhost-permission-denied-publickey-connection-closed-by
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+

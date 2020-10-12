@@ -1,0 +1,9 @@
+
+how to run the hadoop program to find the value of pi
+
+go to the directory mentioned below
+
+c:\Users\Gururajan\Downloads\hadoop-3.1.0\share\hadoop\mapreduce
+
+then run the below command
+hadoop jar hadoop-mapreduce-examples-3.1.0.jar pi 16 1000000

@@ -1,0 +1,54 @@
+
+
+hadoop - apache open source hadoop
+
+cloudera or any other distribution
+horton works
+vmware
+
+windows 10 - platform
+
+hadoop
+hdfs
+map reduce
+HIVE - HIVE SQL
+Pig Latin
+Spark
+
+Hadoop - standalone mode
+Hadoop - Pseduo distributed
+Hadoop - fully distribued system
+         Hadoop on the cloud
+         or in a small network,
+         or in office premises
+
+
+Hadoop is written in Java
+
+pydoop
+no other language except java
+by default
+ruby or c++ or anything
+
+
+hadoop is created on linux and java
+
+if you want to install on windows you need
+customized hadoop for windows
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

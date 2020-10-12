@@ -1,0 +1,28 @@
+
+how to run ruby mapreduce program without hadoop?
+
+type sample.txt | max_temperature_map.rb | sort | max_temperature_reduce.rb
+
+
+how to run ruby mapreduce program on hadoop with hadoop streaming ?
+
+hadoop jar C:\Users\Gururajan\Downloads\hadoop-3.1.0\share\hadoop\tools\lib\hadoop-streaming-3.1.0.jar -file max_temperature_map.rb -mapper "ruby max_temperature_map.rb" -file max_temperature_reduce.rb -reducer "ruby max_temperature_reduce.rb" -input /input_dir/sample.txt -output /output_dir
+
+
+
+how to check the output in hadoop file systems
+----------------------------------------------
+
+from any directory on cmd prompt give the following commands
+
+hadoop fs -ls /output_dir/
+hadoop fs -cat /output_dir/part-r-00000
+
+
+how to clear the hadoop file system output directory
+----------------------------------------------------
+
+hadoop fs -ls /output_dir
+hadoop fs -rm /output_dir/*
+hadoop fs -rmdir /output_dir
+

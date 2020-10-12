@@ -1,0 +1,10 @@
+
+grunt commands
+
+fs -ls
+
+sh -dir
+
+sh -type sudoku.dta
+
+clear

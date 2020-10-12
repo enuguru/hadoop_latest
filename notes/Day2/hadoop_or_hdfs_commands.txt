@@ -1,0 +1,37 @@
+
+hadoop or hdfs commands
+-----------------------
+
+hadoop fs -mkdir /input_dir
+or
+hdfs dfs -mkdir /input_dir
+
+hadoop fs -ls /
+or
+hdfs dfs -ls /
+
+hadoop fs -put sample.txt /input_dir/
+or
+hdfs dfs -put sample.txt /input_dir/
+
+hadoop fs -get /input_dir/sample.txt c:\users\gururajan\
+or
+hdfs dfs -get /input_dir/sample.txt c:\users\gururajan
+
+hadoop fs -ls /input_dir/
+or
+hdfs dfs -ls /input_dir/
+
+hadoop fs -cat /input_dir/sample.txt
+or
+hdfs dfs -cat /input_dir/sample.txt
+
+hadoop fs -mkdir /another_dir
+hadoop fs -ls /
+hadoop cp /input_dir/sample.txt /another_dir/
+hadoop mv /input_dir/sample.txt /another_dir/
+
+
+hadoop fs -rm /output_dir/*
+
+hadoop fs -rmdir /output_dir

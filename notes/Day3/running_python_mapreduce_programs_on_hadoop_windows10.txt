@@ -1,0 +1,49 @@
+
+
+see the location of the hadoop streaming file hadoop-streaming-3.1.0.jar and identify the file in the directory
+
+how to run python mapreduce program without hadoop on 
+windows 10?
+
+type sample.txt | max_temperature_map.py | 
+sort | max_temperature_reduce.py
+
+how to run python wordcount program without hadoop on 
+windows 10?
+
+type file_one.txt | wordcount_mapper.py | 
+sort | wordcount_reducer.py
+
+
+
+how to run mapreduce program with hadoop using hadoop streaming on windows 10?
+
+go to the python source code directory
+
+hadoop jar C:\Users\Gururajan\Downloads\hadoop-3.1.0\share\hadoop\tools\lib\hadoop-streaming-3.1.0.jar -file max_temperature_map.py -mapper "python max_temperature_map.py" -file max_temperature_reduce.py -reducer "python max_temperature_reduce.py" -input /input_dir/sample.txt -output /output_dir
+
+
+
+how to run wordcount program on hadoop with hadoop streaming on windows 10?
+
+go to the python source code directory
+hadoop jar C:\Users\Gururajan\Downloads\hadoop-3.1.0\share\hadoop\tools\lib\hadoop-streaming-3.1.0.jar -file wordcount_mapper.py -mapper "python wordcount_mapper.py" -file wordcount_reducer.py -reducer "python wordcount_reducer.py" -input /input_dir/file_one.txt -output /output_dir
+
+
+
+
+how to check the output in hadoop file systems
+----------------------------------------------
+
+from any directory on cmd prompt give the following commands
+
+hadoop fs -ls /output_dir/
+hadoop fs -cat /output_dir/part-r-00000
+
+
+how to clear the hadoop file system output directory
+----------------------------------------------------
+
+hadoop fs -ls /output_dir
+hadoop fs -rm /output_dir/*
+hadoop fs -rmdir /output_dir

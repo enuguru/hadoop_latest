@@ -1,0 +1,132 @@
+
+download hadoop for 64 bit linux from the binary archives
+
+install java on ubuntu linux 18.04 by giving the following command
+
+sudo apt-get install jdk-1.
+
+sudo apt-get update
+
+sudo add-apt-repository ppa:openjdk-r/ppa
+
+sudo apt-get update
+
+sudo apt-get install openjdk-8-jdk
+
+-------------------------------------------------------------
+if you already have some java versions in the ubuntu system  then
+do the following steps
+
+sudo update-java-alternatives --list
+sudo update-java-alternatives --config java
+choose the appropriate version
+
+sudo update-java-alternatives --config java
+this will show the version you have selected just now
+
+sudo update-alternatives --config javac
+choose the right one
+
+sudo update-alternatives --config javac
+this will show the version you just selected
+-------------------------------------------------------------
+
+java -version
+javac -version
+
+go to /srv/software/hadoop/hadoop-3.1.2/
+
+give command rm -rf ./hdfs/*
+
+cd hdfs
+
+mkdir namenode
+
+mkdir datanode
+
+go to /srv/software/hadoop/hadoop-3.1.2/etc/hadoop
+
+modify the following files
+
+hadoop-env.sh
+hadoop-site.xml
+mapred-site.xml
+yarn-site.xml
+core-site.xml
+
+core-site.xml
+
+<configuration>
+<property>
+  <name>fs.default.name</name>
+    <value>hdfs://localhost:9000</value>
+</property>
+</configuration>
+
+
+hadoop-env.sh
+
+export JAVA_HOME=//usr/lib/jvm/java-8-openjdk-amd64/jre
+export HADOOP_SSH_OPTS="-p 22"
+
+
+yarn-site.xml
+
+<configuration>
+ <property>
+  <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+ </property>
+</configuration>
+
+
+hdfs-site.xml
+
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+   <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/srv/software/hadoop/hadoop-3.1.2/hdfs/namenode</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:/srv/software/hadoop/hadoop-3.1.2/hdfs/datanode</value>
+    </property>
+</configuration>
+
+
+mapred-site.xml
+
+
+<configuration>
+ <property>
+  <name>mapreduce.framework.name</name>
+   <value>yarn</value>
+ </property>
+</configuration>
+
+
+you can give this command from any directory
+hadoop namenode -format
+
+cd /srv/software/hadoop/hadoop-3.1.2/sbin
+
+start-dfs.sh  
+
+start-yarn.sh  
+
+the give   jps   command
+
+this will show 
+
+jps
+namenode
+datanode
+secondary namenode
+node manager
+resource manager
+
+

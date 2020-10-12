@@ -1,0 +1,13 @@
+
+
+what are the three deployment modes of hadoop?
+
+Hadoop Deployment modes
+-----------------------
+ 
+1. Standalone Mode – It is the default mode of configuration of Hadoop. It doesn’t use hdfs instead, it uses a local file system for both input and output. It is useful for debugging and testing.
+
+2. Pseudo-Distributed Mode – It is also called a single node cluster where both NameNode and DataNode resides in the same machine. All the daemons run on the same machine in this mode. It produces a fully functioning cluster on a single machine.
+
+3. Fully Distributed Mode – Hadoop runs on multiple nodes wherein there are separate nodes for master and slave daemons. The data is distributed among a cluster of machines providing a production environment.
+

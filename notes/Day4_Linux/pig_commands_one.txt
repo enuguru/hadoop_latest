@@ -1,0 +1,18 @@
+https://stackoverflow.com/questions/26637863/pig-hadoop-issue-error-2081-unable-to-setup-the-load-function
+before running this program,
+If you are running the pig commands from grunt shell on hadoop cluster, set the property: 
+
+set opt.fetch false;
+
+By setting the above property dump will run in mapreduce mode, by default the above property is set to true.
+
+
+grunt> cat myscript.pig
+a = LOAD 'student' AS (name, age, gpa);
+b = LIMIT a 3;
+DUMP b;
+
+grunt> exec myscript.pig
+(alice,20,2.47)
+(luke,18,4.00)
+(holly,24,3.27)
